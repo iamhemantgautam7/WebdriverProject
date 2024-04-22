@@ -16,30 +16,34 @@ public class WebTableTest {
 
 		ChromeOptions options = new ChromeOptions();
 		options.setBrowserVersion("115");
-//		options.addArguments("--headless");  
+	//	options.addArguments("--headless");  
 		
 		WebDriver driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
 		driver.get("https://demo.seleniumeasy.com/table-sort-search-demo.html");
 		
-		WebElement valueOfWag= driver.findElement(By.xpath("//td[text()='B. Wagner']//following-sibling::td[5]"));
-		System.out.println("Value is= "+ valueOfWag.getText());
+	//	WebElement valueOfWag= driver.findElement(By.xpath("//td[text()='B. Wagner']//following-sibling::td[5]"));
+	//	System.out.println("Value is= "+ valueOfWag.getText());
 		
 		
-		List <WebElement> items= driver.findElements(By.xpath("//td[text()='B. Wagner']//following-sibling::td"));
+		/*List <WebElement> items= driver.findElements(By.xpath("//td[text()='San Francisco']//following-sibling::td"));
 		System.out.println("Number of items :"+items.size() );
 		for(WebElement cell:items) {
 		System.out.println(cell.getText());
 		}
 		
-		System.out.println("-------------------------------");
+		System.out.println("-------------------------------");*/
 		
 		
-		List <WebElement> items1= driver.findElements(By.xpath("//td[text()='San Francisco']//following-sibling::td"));
+		List <WebElement> items1= driver.findElements(By.xpath("//td[text()='San Francisco']//preceding-sibling::td[2]"));
 		System.out.println("Number of items :"+items1.size() );
+		
+		
 		for(WebElement cell:items1) {
+			
 		System.out.println(cell.getText());
-		System.out.println(cell.getText());
+		
+		
 		}
 		
 		

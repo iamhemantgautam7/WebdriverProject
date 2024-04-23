@@ -14,7 +14,8 @@ public class dropdownTest {
 
 		ChromeOptions options = new ChromeOptions();
 		options.setBrowserVersion("115");
-//		options.addArguments("--headless");  
+//		options.addArguments("--headless"); 
+//		options.addArguments("--blink-settings=imagesEnabled=false"); // this will disable the images from page
 		
 		WebDriver driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
@@ -34,6 +35,11 @@ public class dropdownTest {
 		List <WebElement> items=mulSel.getAllSelectedOptions();
 		System.out.println("Items Seleccted ="+items.size());
 		mulSel.deselectByValue("Florida");
+		
+		for(WebElement cells:items) {
+			System.out.println(cells.getText());
+			
+		}
 
 	}
 

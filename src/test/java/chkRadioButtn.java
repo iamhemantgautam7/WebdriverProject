@@ -10,7 +10,8 @@ public class chkRadioButtn {
 		
 		ChromeOptions options = new ChromeOptions();
 		options.setBrowserVersion("115");
-//		options.addArguments("--headless");  
+//		options.addArguments("--headless"); 
+//		options.addArguments("--blink-settings=imagesEnabled=false"); // this will disable the images from page
 		
 		WebDriver driver = new ChromeDriver(options);
 		driver.manage().window().maximize();

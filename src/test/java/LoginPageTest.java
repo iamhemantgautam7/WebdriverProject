@@ -25,7 +25,9 @@ public class LoginPageTest {
 		driver.findElement(By.xpath("//input[@type='password' and @name='password']")).sendKeys("SuperSecretPassword!");
 		
 		
-		driver.findElement(By.className("radius")).click();
+		//driver.findElement(By.className("radius")).click();  //this will also work
+		driver.findElement(By.cssSelector(".fa.fa-2x.fa-sign-in")).click();
+		//fa fa-2x fa-sign-in
 		//driver.findElement(By.xpath("//i[@class='fa fa-2x fa-sign-in']")).click();  //Relative xpath
 		//driver.findElement(By.xpath("/html/body/div[2]/div/div/form/button/i")).click();  //absolute xpath
 		

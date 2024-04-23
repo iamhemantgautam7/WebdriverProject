@@ -19,7 +19,8 @@ public class LoginPageTest {
 		driver.get("https://the-internet.herokuapp.com/login");
 		
 		//driver.findElement(By.name("username")).sendKeys("tomsmith");
-		driver.findElement(By.xpath("//input[@type='text' and @id='username']")).sendKeys("tomsmith");
+		//driver.findElement(By.xpath("//input[@type='text' and @id='username']")).sendKeys("tomsmith");
+		driver.findElement(By.cssSelector("#username")).sendKeys("tomsmith");   //this is for CSSselector
 		//driver.findElement(By.id("password")).sendKeys("SuperSecretPassword!");
 		driver.findElement(By.xpath("//input[@type='password' and @name='password']")).sendKeys("SuperSecretPassword!");
 		

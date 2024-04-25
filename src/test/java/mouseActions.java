@@ -33,7 +33,7 @@ public class mouseActions {
 */
 		driver.get("https://www.stqatools.com/demo/DoubleClick.php");
 		
-		Thread.sleep(5000);
+	//	Thread.sleep(5000);
 		Actions actions=new Actions(driver);
 		
 		WebElement btn =driver.findElement(By.xpath("//button[normalize-space()='Click Me / Double Click Me!']"));

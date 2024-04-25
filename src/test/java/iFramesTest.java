@@ -3,6 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.Select;
 
 public class iFramesTest {
 
@@ -38,6 +39,13 @@ public class iFramesTest {
 		driver.switchTo().defaultContent();
 		System.out.println(driver.findElement(By.xpath("//label//span")).getText());
 		
-	}
+		
+		driver.switchTo().frame("frame2");
+		WebElement dropDwn=driver.findElement(By.id("animals"));
+		
+		Select select=new Select(dropDwn);
+		select.selectByValue("babycat");
+		
+		}
 
 }
